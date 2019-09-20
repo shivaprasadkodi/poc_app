@@ -3,9 +3,9 @@ node {
       git 'https://github.com/nagbabuk/poc_app'
       }
       stage('Compile-Package'){
-            //getting ant path
-           //def javaHome = tool name: 'java', type: 'jdk'
-           def antHome = tool name: 'ant', type: 'ant'      
-            sh "${antHome}/bin/ant war"
+            //getting ant path         
+           def antHome = tool name: 'ant', type: 'ant'
+           env.JAVA_HOME = tool name: 'java', type: 'jdk'
+           sh "${antHome}/bin/ant war"
       }
 }
