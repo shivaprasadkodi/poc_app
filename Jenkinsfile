@@ -9,10 +9,10 @@ node {
            sh "${antHome}/bin/ant war"
       }
       stage('Deploy-tomcat'){
-       sshagent(['test-ubuntu']) {
+       //sshagent(['test-ubuntu']) {
     // some block
-             sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps'
-       }     
+             sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps'
+       //}     
       }
 
 
