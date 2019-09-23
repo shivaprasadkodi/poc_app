@@ -29,7 +29,7 @@
     <target name = "compile"
      description = "compiles project files to dist/classes">
         <mkdir dir="${javac.dest}" />
-        <javac srcdir="${java.source.dir}"
+        <javac includeantruntime=true srcdir="${java.source.dir}"
               destdir="${javac.dest}"
              includes="**/*.java"
          classpathref="build.classpath" 
