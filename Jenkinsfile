@@ -9,9 +9,15 @@ node {
            sh "${antHome}/bin/ant war"
       }
       stage('Deploy-tomcat'){
+            
+            
+            steps {
+                //sh 'echo "Hello World"'
+                sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
+            }
        //sshagent(['test-ubuntu']) {
     // some block
-             sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps'
+             
        //}     
       }
 
