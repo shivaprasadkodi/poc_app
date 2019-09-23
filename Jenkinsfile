@@ -1,7 +1,5 @@
-pipeline {
-    agent any 1
-      stages{
-            
+node{ 
+          
       stage('SCM Checkout'){      
       git 'https://github.com/nagbabuk/poc_app'
       }
@@ -14,17 +12,17 @@ pipeline {
       stage('Deploy-tomcat'){
             
             
-            steps {
+            //steps {
                 //sh 'echo "Hello World"'
                 //sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
                   sh label: '', script: 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
-            }
+          // }
        //sshagent(['test-ubuntu']) {
     // some block
              
        //}     
       }
-      }
+     
 
 
 }
