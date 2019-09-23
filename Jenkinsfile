@@ -11,7 +11,7 @@ node {
       stage('Deploy-tomcat'){
        sshagent(['test-ubuntu']) {
     // some block
-             sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/test/dist/lib/*.war root@192.168.33.12:/opt/tomcat/webapps'
+             sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps'
        }     
       }
 
