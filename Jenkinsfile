@@ -13,7 +13,8 @@ node {
             
             steps {
                 //sh 'echo "Hello World"'
-                sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
+                //sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
+                  sh label: '', script: 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
             }
        //sshagent(['test-ubuntu']) {
     // some block
