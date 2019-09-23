@@ -1,4 +1,6 @@
 node {
+      stages{
+            
       stage('SCM Checkout'){      
       git 'https://github.com/nagbabuk/poc_app'
       }
@@ -20,6 +22,7 @@ node {
     // some block
              
        //}     
+      }
       }
 
 
