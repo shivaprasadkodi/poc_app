@@ -15,7 +15,7 @@ node{
             //steps {
                 //sh 'echo "Hello World"'
                 //sh 'scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
-                  sh label: '', script: 'sudo scp /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
+                  sh label: '', script: 'sudo scp -r /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
           // }
        //sshagent(['test-ubuntu']) {
     // some block
