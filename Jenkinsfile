@@ -18,7 +18,7 @@ node{
                   sh label: '', script: 'cp -r /var/lib/jenkins/workspace/test/dist/lib/*.war /opt/tomcat/webapps/'
           // }
        //sshagent(['test-ubuntu']) {
-    // some block
+    // some block test
              
        //}     
       }
